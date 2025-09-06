@@ -1,1 +1,1 @@
-# Simple-Java
+# Simple Java
