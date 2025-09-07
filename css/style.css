@@ -1,0 +1,62 @@
+:root {
+    --grid-size: clamp(18px, 2vw, 25px);
+    /* size of each square */
+    --line-color: rgba(0, 100, 255, 0.08);
+    /*grid lines color */
+    --line-thickness: 1px;
+    /* thickness of lines */
+    --bg: #f8fbff;
+    /* background color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid background */
+.grid-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    background-image:
+        linear-gradient(to right, var(--line-color) var(--line-thickness), transparent var(--line-thickness)),
+        linear-gradient(to bottom, var(--line-color) var(--line-thickness), transparent var(--line-thickness));
+    background-size: var(--grid-size) var(--grid-size);
+    background-position: 0 0;
+    z-index: -1;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+}
+
+.content>h1 {
+    font-family: "Permanent Marker";
+    font-size: 5rem;
+}
+
+.content>p {
+    font-family: "Libre Baskerville";
+    font-size: 20px;
+}
+
+.content>p>span {
+    position: relative;
+    background: linear-gradient(120deg,
+            rgba(186, 128, 255, 0.35) 0%,
+            rgba(186, 128, 255, 0.35) 100%);
+    padding: 0 8px;
+}
