@@ -41,16 +41,27 @@ body {
 /* Main Content */
 .content {
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .content>h1 {
     font-family: "Permanent Marker";
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
+    margin-bottom: 15px;
 }
 
 .content>p {
     font-family: "Libre Baskerville";
-    font-size: 20px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    margin-bottom: 12px;
+}
+
+.content>p+p {
+    font-size: clamp(1rem, 1.3vw, 1.8rem);
+    font-family: "Indie Flower";
+    font-weight: 10px;
 }
 
 .content>p>span {
@@ -59,4 +70,18 @@ body {
             rgba(186, 128, 255, 0.35) 0%,
             rgba(186, 128, 255, 0.35) 100%);
     padding: 0 8px;
+}
+
+/* Hero Image Container */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.hero-image>img {
+    height: clamp(200px, 30vw, 400px);
+    width: auto;
+    display: block;
 }
