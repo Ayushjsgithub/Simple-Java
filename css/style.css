@@ -39,37 +39,60 @@ body {
 }
 
 /* Main Content */
+
+@keyframes fadeInFromBack {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .content {
     text-align: center;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    animation: fadeInFromBack 1s ease-out forwards;
 }
 
+/* Heading */
 .content>h1 {
-    font-family: "Permanent Marker";
+    font-family: "Permanent Marker", cursive;
     font-size: clamp(3rem, 5vw, 5rem);
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    line-height: 1.1;
 }
 
+/* First Paragraph */
 .content>p {
-    font-family: "Libre Baskerville";
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
-    margin-bottom: 12px;
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(2rem, 2.2vw, 3rem);
+    margin-bottom: 14px;
+    line-height: 1.6;
 }
 
+/* Second Paragraph Tagline */
 .content>p+p {
-    font-size: clamp(1.3rem, 1.3vw, 1.8rem);
-    font-family: "Indie Flower";
-    font-weight: 10px;
+    font-family: "Indie Flower", cursive;
+    font-size: clamp(1.6rem, 1.8vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
+/* Highlighted Span */
 .content>p>span {
     position: relative;
     background: linear-gradient(120deg,
             rgba(186, 128, 255, 0.35) 0%,
             rgba(186, 128, 255, 0.35) 100%);
     padding: 0 8px;
+    border-radius: 2px;
 }
 
 /* Hero Image Container */
@@ -77,11 +100,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 30px;
+    animation: fadeInFromBack 1.2s ease-out forwards;
 }
 
+/* Hero Image */
 .hero-image>img {
-    height: clamp(200px, 30vw, 400px);
+    height: clamp(220px, 35vw, 500px);
     width: auto;
     display: block;
+    object-fit: contain;
 }
