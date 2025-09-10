@@ -38,7 +38,7 @@ body {
     z-index: -1;
 }
 
-/* Main Content */
+/* Hero Section */
 
 @keyframes fadeInFromBack {
     0% {
@@ -52,12 +52,22 @@ body {
     }
 }
 
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInFromBack 1s ease-out forwards;
+}
+
 .content {
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    animation: fadeInFromBack 1s ease-out forwards;
 }
 
 /* Heading */
@@ -110,4 +120,61 @@ body {
     width: auto;
     display: block;
     object-fit: contain;
+}
+
+
+/* James Section */
+.james-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    animation: fadeInFromBack 1s ease-out forwards;
+}
+
+/* Inner Container */
+.james {
+    display: flex;
+    flex: 1;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+/* James Image */
+.james>p {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    line-height: 1.8;
+    color: #333;
+    max-width: 550px;
+}
+
+/* James Quote Text */
+.james>img {
+    height: clamp(300px, 35vw, 500px);
+    width: auto;
+    border-radius: 10px;
+}
+
+/* Responsiveness*/
+@media (max-width: 900px) {
+    .james {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .james>img {
+        width: 80%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .james>p {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
 }
