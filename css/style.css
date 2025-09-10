@@ -131,6 +131,9 @@ body {
     display: flex;
     justify-content: center;
     animation: fadeInFromBack 1s ease-out forwards;
+    border-top: none;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
 }
 
 /* Inner Container */
