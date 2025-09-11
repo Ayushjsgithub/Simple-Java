@@ -1,0 +1,6 @@
+.mainHeading {
+    text-align: center;
+    font-family: "Indie Flower", serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+
+}
