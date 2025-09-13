@@ -110,7 +110,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
     animation: fadeInFromBack 1.2s ease-out forwards;
 }
 
@@ -178,4 +178,30 @@ body {
         font-size: 1.1rem;
         max-width: 90%;
     }
+}
+
+
+/* Main Button */
+.hero-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(120deg, rgba(186, 128, 255, 0.35), rgba(186, 128, 255, 0.35));
+    color: #333;
+    font-weight: 600;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(120deg, rgba(186, 128, 255, 0.55), rgba(186, 128, 255, 0.55));
+    border-color: rgba(186, 128, 255, 0.7);
+    transform: translateY(-3px);
 }
